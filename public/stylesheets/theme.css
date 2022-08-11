@@ -160,6 +160,8 @@ header{
     /* background-color: bisque; */
 }
 
+
+
 .lista_navegacao{
     display: flex;
     justify-content: space-around;
@@ -170,7 +172,7 @@ header{
     text-decoration-style: none;
 }
 
-.lista_navegacao a:hover{
+ul li.active a, .lista_navegacao a:hover{
     color: #fd7e14;
 }
 
