@@ -32,11 +32,11 @@
     <section id="bot_header" class="tamanho_maximo_conteudo display_flex">
         <div id="barra_navegacao" class="texto_garamond ">
             <ul class="lista_navegacao">
-                <li><a href="/">JÓIAS</a></li>
-                <li><a href="/casamento">CASAMENTO</a></li>
-                <li><a href="/relogios">RELÓGIOS</a></li>
-                <li><a href="/acessorios">ACESSORIOS</a></li>
-                <li><a href="/masculino">MASCULINO</a></li>
+                <li class="<% if(menu.joias){%>active<%}%>"><a href="/">JÓIAS</a></li>
+                <li class="<% if(menu.casamento){%>active<%}%>"><a href="/casamento">CASAMENTO</a></li>
+                <li class="<% if(menu.relogios){%>active<%}%>"><a href="/relogios">RELÓGIOS</a></li>
+                <li class="<% if(menu.acessorios){%>active<%}%>"><a href="/acessorios">ACESSORIOS</a></li>
+                <li class="<% if(menu.masculino){%>active<%}%>"><a href="/masculino">MASCULINO</a></li>
             </ul>
         </div>
         <form id="zona_busca">
