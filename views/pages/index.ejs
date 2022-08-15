@@ -34,7 +34,8 @@
             
             <% if(banner.typePage == 'home'){ %>
                     <%- include("../partials/nav.categoria.ejs") %> 
-                    <%- include("../partials/mais_vendidos.ejs") %>     
+                    <%- include("../partials/mais_vendidos.ejs") %> 
+                    <%- include("../partials/carrosel.ejs") %>     
             <% } %>   
 
             <section class="experiencia_vivara">
@@ -48,20 +49,27 @@
             </section>
          
             <section class="grade_produtos display_flex">
-                <div class="item_produto">
-                    <div class="produto_foto">
-                        <img src="images/alinaça_iten.webp" alt="aliança" />
-                    </div>
-                    <div class="produto_info display_flex_column">
-                        <h2 class="titulo_produto texto_roboto texto_cinza">VIVARA</h2>
-                        <div class="item_nome">Aliança de Casamento Ouro Amarelo</div>
-                        <div class="item_preco display_flex_column texto_roboto">
-                            <h2 class="avista">R$1.200,00</h2>
-                            <h3 class="parcelado texto_cinza">10x de R$125,00</h3>
-                            <div class="botao_comprar texto_branco cor_laranja">COMPRAR</div>
+
+               <% if(lista) { %> 
+                    <% for (let i=0; i < lista.length; i++) { %>
+                        <% console.log(lista[i]?.image1) %>
+                        <div class="item_produto">
+                            <div class="produto_foto">
+                                <img src="images/<%= lista[i].image1 %>" alt="aliança" />
+                            </div>
+                            <div class="produto_info display_flex_column">
+                                <h2 class="titulo_produto texto_roboto texto_cinza">VIVARA</h2>
+                                <div class="item_nome"><%= lista[i].nome %></div>
+                                <div class="item_preco display_flex_column texto_roboto">
+                                    <h2 class="avista">R$<%= lista[i].preco %>0,00</h2>
+                                    <h3 class="parcelado texto_cinza">10x de R$<%= lista[i].preco %>,00</h3>
+                                    <div class="botao_comprar texto_branco cor_laranja">COMPRAR</div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
+
+                <% } } %>
+
             </section>
         </main>
 
