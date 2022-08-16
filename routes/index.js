@@ -9,6 +9,7 @@ router.get('/casamento', homeController.casamento);
 router.get('/relogios', homeController.relogios);
 router.get('/acessorios', homeController.acessorios);
 router.get('/masculino', homeController.masculino);
+router.get('/produto', homeController.produto);
 
 router.get('/search', searchController.search);
 
