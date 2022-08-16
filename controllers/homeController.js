@@ -3,7 +3,6 @@ const {vivara} = require('../models/vivara')
 
 const joias = (req, res) => {
     let lista = vivara.getAll()
-    // console.log("lista", lista)
     res.render('pages/index',{
         menu: createMenuObject('joias'),
         banner: {
@@ -57,7 +56,11 @@ const masculino = (req, res) => {
         lista
     })
 }
-
+const produto = (req, res) => {
+    res.render('pages/produto',{
+        menu: createMenuObject('false'),
+    })
+}
 
 
 module.exports.joias = joias;
@@ -65,3 +68,4 @@ module.exports.casamento = casamento;
 module.exports.acessorios = acessorios;
 module.exports.relogios = relogios;
 module.exports.masculino = masculino;
+module.exports.produto = produto;
