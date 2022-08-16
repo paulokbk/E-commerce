@@ -20,7 +20,7 @@
 }
 
 .banner_produto {
-    background-image: url(../assets/produto_principal.webp);
+    background-image: url(/public/images/produto_principal.webp);
     height: 500px;
     width: 100%;
     background-position: center;
