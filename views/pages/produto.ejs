@@ -68,7 +68,7 @@
         </aside>
         <aside class="lado_direito_produto display_flex">
             <div class="zona_nome_preco">
-                <h1 class="texto_garamond texto_cinza">Coleção Vivara</h1>
+                <a href="/"> <h1 class="texto_garamond texto_cinza">Coleção Vivara</h1> </a>
                 <h2 class="texto_garamond">Aliança de Casamento Ouro Amarelo</h2>
                 <h3 class="texto_roboto">R$1.250,00</h3>
                 <h4 class="texto_roboto texto_cinza">10x sem juros de R$ 125,00</h4>
@@ -78,7 +78,8 @@
                     <h2>Tamanho 11</h2>
                     <img src="/images/chevron-compact-down.svg" alt="">
                 </div>
-                <h2 class="guia_medidas texto_roboto texto_cinza">GUIA DE MEDIDAS</h2>
+                <!-- <h2 class="guia_medidas texto_roboto texto_cinza">GUIA DE MEDIDAS</h2> -->
+                <button class="guia_medidas texto_roboto texto_cinza" ng-click="openModal($event)" modal-open="modalGuiaMedidas">GUIA DE MEDIDAS</button>
             </div>
             <div class="quantidade retangulo_arredondado texto_roboto display_flex">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
@@ -102,9 +103,12 @@
                       </svg>
                     <h3>Calcular frete e prazo de entrega</h3>
                 </div>
-                <div class="digitar_frete display_flex texto_roboto cor_laranja_texto">
-                    Não sei meu CEP
-                </div>
+                <a href="https://buscacepinter.correios.com.br/app/endereco/index.php">
+                    <div class="digitar_frete display_flex texto_roboto cor_laranja_texto">
+                        Não sei meu CEP
+                     </div>
+                </a>
+
             </div>
             <div class="beneficios_vivara">
                 <h2>BENEFÍCIOS VIVARA</h2>
