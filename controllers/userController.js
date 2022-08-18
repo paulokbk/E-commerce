@@ -5,6 +5,12 @@ const login = (req, res) => {
 }
 
 
+const checkout = (req, res) => {
+    res.render ('pages/checkout', {
+    menu: createMenuObject('false')})
+
+}
+
 
 const cadastro = (req, res) => {
     res.render('pages/cadastro',{
@@ -15,3 +21,5 @@ const cadastro = (req, res) => {
 
 module.exports.login = login
 module.exports.cadastro = cadastro
+module.exports.checkout = checkout
+
