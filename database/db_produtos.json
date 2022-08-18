@@ -1,0 +1,16 @@
+{
+  "produtos": [
+    {
+      "id": "42c61943-ecc3-4b5a-84f6-f9f51940a0d8",
+      "nome": "teste1",
+      "preco": "teste",
+      "volume": "100",
+      "material": "ouro",
+      "cor": "verde",
+      "largura": "5mm",
+      "garantia": "1",
+      "tipo": ["joias", "casamento", "relogios", "acessorios", "masculino"],
+      "imagem": "af9ac61d-6bf0-4fd7-9341-dd995d9cffcc-produto"
+    }
+  ]
+}

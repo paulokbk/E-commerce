@@ -20,7 +20,7 @@
 }
 
 .banner_produto {
-    background-image: url(/public/images/produto_principal.webp);
+    background-image: url(/images/produto_principal.webp);
     height: 500px;
     width: 100%;
     background-position: center;
@@ -141,6 +141,8 @@
     text-decoration: underline;
     font-size: 12px;
     font-weight: 500;
+    border: none;
+    background: none;
 }
 
 .quantidade{

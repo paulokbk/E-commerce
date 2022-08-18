@@ -3,22 +3,41 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const methodOverride = require('method-override');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+//importando as rotas de edição de produtos
+const produtoRoutes =  require('./routes/produtos')
+
+
+const { Server } = require('http');
+
 var app = express();
 
-// view engine setup
+// view engine setup (diretorio de Views)
 app.set('views', path.join(__dirname, 'views'));
+
+//Definindo o EJS como template engine
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+//definindo repositorio de arquivos estaticos
 app.use(express.static(path.join(__dirname, 'public')));
 
+// permitir o uso de PUT e Delete no servidor
+app.use(methodOverride('_method'));
+
+//permitir o uso do formulario multipart/form-data
+app.use(express.urlencoded({extended: false}));
+
+
+app.use('/adm', produtoRoutes);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 

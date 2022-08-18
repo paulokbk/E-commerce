@@ -91,3 +91,23 @@
 .carrossel_zona{
     padding-bottom: 40px;
 }
+
+.edicao{
+    padding-top: 40px;
+    gap: 20px;
+}
+
+.botao_editar{
+    opacity: 100;
+    background-color: #ffa67d;
+    color: white;
+    font-weight: 700;
+}
+
+.botao_add{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    color: #ffa67d;
+}
