@@ -17,6 +17,7 @@ router.get('/carrinho', carrinhoController.carrinho);
 router.get('/produto', homeController.produto);
 
 router.get('/login', userController.login);
+router.get('/checkout', userController.checkout)
 
 
 router.get('/search', searchController.search);
