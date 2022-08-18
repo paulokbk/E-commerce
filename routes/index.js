@@ -11,11 +11,8 @@ router.get('/casamento', homeController.casamento);
 router.get('/relogios', homeController.relogios);
 router.get('/acessorios', homeController.acessorios);
 router.get('/masculino', homeController.masculino);
-
 router.get('/carrinho', carrinhoController.carrinho);
-
 router.get('/produto', homeController.produto);
-
 router.get('/login', userController.login);
 router.get('/checkout', userController.checkout)
 
