@@ -13,7 +13,7 @@ module.exports = {
     },
     
     filename: (request, file, callback) =>{
-        const fileName = `${v4()}-produto`;
+        const fileName = `${v4()}-${file.originalname}`;
         callback(null, fileName);
     }
 })
