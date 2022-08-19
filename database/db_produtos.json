@@ -1,5 +1,32 @@
 {
   "produtos": [
-
+    {
+      "id": "ac1acb45-2dca-475e-a4fe-b3d286af7e51",
+      "nome": "Anel Infinito",
+      "preco": "1590",
+      "status": "LANÇAMENTO",
+      "volume": "",
+      "material": "Ouro",
+      "cor": "Amarelo",
+      "largura": "",
+      "garantia": "12",
+      "tamanho": ["12", "13", "14", "15", "21"],
+      "tipo": "joias",
+      "imagem": "1c0286e1-a893-4ce2-a303-fd469f0ee340-AN00052979.webp"
+    },
+    {
+      "id": "550be47c-a532-49d6-8f10-47c4bee06407",
+      "nome": "Aliança de Casamento Ouro Amarelo",
+      "preco": "1250",
+      "status": "VIVARA",
+      "volume": "",
+      "material": "ouro",
+      "cor": "Amarelo",
+      "largura": "4mm",
+      "garantia": "12",
+      "tamanho": ["14", "15", "16", "19", "22"],
+      "tipo": ["joias", "casamento"],
+      "imagem": "4914f2ea-fbb4-4372-8510-0749d7da797f-AN00048702b.webp"
+    }
   ]
 }
