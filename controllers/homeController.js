@@ -2,58 +2,58 @@ const {createMenuObject} = require('../helpers/createMenuObject')
 const {vivara} = require('../models/vivara')
 
 const joias = (req, res) => {
-    let lista = vivara.getAll()
+    let produtos = vivara.findAll()
     res.render('pages/index',{
         menu: createMenuObject('joias'),
         banner: {
             background: 'fulbanner_home.webp',
             typePage: 'home'
         },
-        lista
+        produtos
     })
 }
 
 const casamento = (req, res) => {
-    let lista = vivara.getAll()
+    let produtos = vivara.findAll()
     res.render('pages/index',{
         menu: createMenuObject('casamento'),
         banner: {
             background: 'fullbanner-casamento.webp',
         },
-        lista
+        produtos
     })
 }
 
 const relogios = (req, res) => {
-    let lista = vivara.getAll()
+    let produtos = vivara.findAll()
     res.render('pages/index',{
         menu: createMenuObject('relogios'),
         banner: {
             background: 'fullbanner_relogios_vivara_2560_1024.webp',
         },
-        lista
+        produtos
     })
 }
 
 const acessorios = (req, res) => {
-    let lista = vivara.getAll()
+    let produtos = vivara.findAll()
     res.render('pages/index',{
         menu: createMenuObject('acessorios'),
         banner: {
             background: 'fullbanner_acessorios_oculos_2560_1024.webp',
         },
-        lista
+        produtos
     })
 }
 
 const masculino = (req, res) => {
-    let lista = vivara.getAll()
+    let produtos = vivara.findAll()
     res.render('pages/index',{
         menu: createMenuObject('masculino'),
         banner: {
             background: 'fullbanner-masculino-acessorios.webp',
         },
-        lista
+        produtos
     })
 }
 const produto = (req, res) => {
