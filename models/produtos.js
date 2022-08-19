@@ -11,6 +11,10 @@ const writeToDB = () =>{
 }
 
 const Produto = {
+
+    findAll: () => db_produtos.produtos,
+
+
     criar: (produto, imagem) =>{
         db_produtos.produtos.push({ id: v4(), ...produto, imagem});
         writeToDB();

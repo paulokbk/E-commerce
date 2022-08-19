@@ -2,7 +2,8 @@ const Produto = require('../models/produtos');
 
 const produtoController = {
     index: (req, res) =>{
-        res.render('cadastroProdutos/indexProdutos')
+        const produtos = Produto.findAll();
+        res.render('cadastroProdutos/indexProdutos', { produtos })
     },
 
     criar: (req, res) =>{

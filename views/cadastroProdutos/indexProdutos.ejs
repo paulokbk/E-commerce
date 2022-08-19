@@ -25,9 +25,6 @@
                 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
               </svg></a>
 
-        <section class="banner_home">
-         
-        </section>
 
             <section class="experiencia_vivara">
                 <section class="zona_titulo">
@@ -40,22 +37,32 @@
             </section>
          
             <section class="grade_produtos display_flex">
-                <div class="item_produto">
+            
+            <% if (produtos && produtos.length > 0) { %> 
+                <% produtos.map( produtos => { %>   
+                    <div class="item_produto">
                     <div class="produto_foto">
-                        <img src="/images/alinaça_iten.webp" alt="aliança" />
+                        <img src="/produtos.images/<%= produtos.imagem %>"/>
                     </div>
                     <div class="produto_info display_flex_column">
-                        <h2 class="titulo_produto texto_roboto texto_cinza">VIVARA</h2>
-                        <div class="item_nome">Aliança</div>
+                        <h2 class="titulo_produto texto_roboto texto_cinza"><%= produtos.status %></h2>
+                        <div class="item_nome"><%= produtos.nome %></div>
                         <div class="item_preco display_flex_column texto_roboto">
-                            <h2 class="avista">R$500</h2>
+                            <h2 class="avista">R$<%= produtos.preco %>,00</h2>
                             <div class="edicao display_flex">
-                            <div class="botao_comprar botao_editar">EDITAR</div> 
-                             <div class="botao_comprar botao_editar">DELETAR</div>
+                                <div class="botao_editar">VISUALIZAR</div>
+                            <div class="botao_editar">EDITAR</div> 
+                             <div class="botao_editar">DELETAR</div>
+                             
                             </div>
                         </div>
                     </div>
                 </div>
+              <%  }) %>      
+           <% } else {  %>
+            <h2 class="h2_titulo texto_roboto">-- NÃO HÁ NENHUM PRODUTO CADASTRADO --</h2>
+            <% } %> 
+            
                 
 
 
