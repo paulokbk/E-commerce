@@ -1,7 +1,7 @@
+const { Console } = require('console');
 const fs = require('fs');
+const { type } = require('os');
 const {v4} = require('uuid');
-
-
 let db_produtos = require('../database/db_produtos.json');
 
 
@@ -14,6 +14,15 @@ const Produto = {
 
     findAll: () => db_produtos.produtos,
 
+    findByCategoria: (tipo) => {
+        return db_produtos.produtos.filter( produto =>{
+            for(let i = 0; i < produto.tipos.length; i++){
+                if(produto.tipos[i] == tipo){
+                        return produto
+                }
+            }
+        })  
+    },
 
     criar: (produto, imagem) =>{
         db_produtos.produtos.push({ id: v4(), ...produto, imagem});
