@@ -1,8 +1,8 @@
 const {createMenuObject} = require('../helpers/createMenuObject')
-const {vivara} = require('../models/vivara')
+const  Produto  = require('../models/produtos')
 
 const joias = (req, res) => {
-    let produtos = vivara.findAll()
+    let produtos = Produto.findAll()
     res.render('pages/index',{
         menu: createMenuObject('joias'),
         banner: {
@@ -14,7 +14,7 @@ const joias = (req, res) => {
 }
 
 const casamento = (req, res) => {
-    let produtos = vivara.findAll()
+    const produtos = Produto.findByCategoria('casamento');
     res.render('pages/index',{
         menu: createMenuObject('casamento'),
         banner: {
@@ -25,7 +25,7 @@ const casamento = (req, res) => {
 }
 
 const relogios = (req, res) => {
-    let produtos = vivara.findAll()
+    let produtos = Produto.findByCategoria('relogios')
     res.render('pages/index',{
         menu: createMenuObject('relogios'),
         banner: {
@@ -36,7 +36,7 @@ const relogios = (req, res) => {
 }
 
 const acessorios = (req, res) => {
-    let produtos = vivara.findAll()
+    let produtos = Produto.findByCategoria('acessorios')
     res.render('pages/index',{
         menu: createMenuObject('acessorios'),
         banner: {
@@ -47,7 +47,7 @@ const acessorios = (req, res) => {
 }
 
 const masculino = (req, res) => {
-    let produtos = vivara.findAll()
+let produtos = Produto.findByCategoria('masculino')
     res.render('pages/index',{
         menu: createMenuObject('masculino'),
         banner: {
