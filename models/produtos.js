@@ -14,6 +14,14 @@ const Produto = {
 
     findAll: () => db_produtos.produtos,
 
+    bestSeller: () => {
+        return db_produtos.produtos.filter(produto =>{
+            if(produto.bestseller){
+                return produto
+            }
+        })
+    },
+
     findByCategoria: (tipo) => {
         return db_produtos.produtos.filter( produto =>{
             for(let i = 0; i < produto.tipos.length; i++){

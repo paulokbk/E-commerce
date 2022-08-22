@@ -2,14 +2,15 @@ const {createMenuObject} = require('../helpers/createMenuObject')
 const  Produto  = require('../models/produtos')
 
 const joias = (req, res) => {
-    let produtos = Produto.findAll()
+    const bestSellers = Produto.bestSeller();
+    const produtos = Produto.findAll();
     res.render('pages/index',{
         menu: createMenuObject('joias'),
         banner: {
             background: 'fulbanner_home.webp',
             typePage: 'home'
         },
-        produtos
+        produtos, bestSellers
     })
 }
 

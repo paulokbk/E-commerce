@@ -265,6 +265,8 @@ footer{
 }
 
 .item_preco h2{
+    font-size: 1.2em;
+    padding-top: 10px;
     font-weight: 900;
 }
 
