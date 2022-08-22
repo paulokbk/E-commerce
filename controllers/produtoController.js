@@ -1,4 +1,4 @@
-const Produto = require('../models/produtos');
+const Produto  = require('../models/produtos');
 
 const produtoController = {
     index: (req, res) =>{
@@ -11,6 +11,10 @@ const produtoController = {
     },
 
     criarProduto: (req, res) =>{
+        const inputTipo = req.body.tipos;
+        if(typeof inputTipo == "string"){
+            req.body.tipos = [req.body.tipos]
+        }
         const produto = req.body;
         const imagem = req.file.filename;
         Produto.criar(produto, imagem);
