@@ -13,7 +13,11 @@ router.get('/acessorios', homeController.acessorios);
 router.get('/masculino', homeController.masculino);
 router.get('/carrinho', carrinhoController.carrinho);
 router.get('/produto', homeController.produto);
+// <<====  User router Start  ====> // 
 router.get('/login', userController.login);
+router.get('/cadastro', userController.cadastro)
+router.get('/usuario', userController.usuario);
+// <<====  User router End  ====> // 
 router.get('/checkout', userController.checkout)
 
 

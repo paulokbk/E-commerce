@@ -11,6 +11,12 @@ const checkout = (req, res) => {
 
 }
 
+const usuario = (req, res) => {
+    res.render('pages/usuario',{
+        menu: createMenuObject('false'),
+    })
+}
+
 
 const cadastro = (req, res) => {
     res.render('pages/cadastro',{
@@ -22,4 +28,5 @@ const cadastro = (req, res) => {
 module.exports.login = login
 module.exports.cadastro = cadastro
 module.exports.checkout = checkout
+module.exports.usuario = usuario
 
