@@ -39,16 +39,16 @@
             <section class="grade_produtos display_flex">
             
             <% if (produtos && produtos.length > 0) { %> 
-                <% produtos.map( produtos => { %>   
+                <% produtos.map( produto => { %>   
                     <div class="item_produto">
                     <div class="produto_foto">
-                        <img src="/produtos.images/<%= produtos.imagem %>"/>
+                        <img src="/produtos.images/<%= produto.imagem %>"/>
                     </div>
                     <div class="produto_info display_flex_column">
-                        <h2 class="titulo_produto texto_roboto texto_cinza"><%= produtos.status %></h2>
-                        <div class="item_nome"><%= produtos.nome %></div>
+                        <h2 class="titulo_produto texto_roboto texto_cinza"><%= produto.status %></h2>
+                        <div class="item_nome"><%= produto.nome %></div>
                         <div class="item_preco display_flex_column texto_roboto">
-                            <h2 class="avista">R$<%= produtos.preco %>,00</h2>
+                            <h2 class="avista">R$<%= produto.preco %>,00</h2>
                             <div class="edicao display_flex">
                                 <div class="botao_editar">VISUALIZAR</div>
                             <div class="botao_editar">EDITAR</div> 
