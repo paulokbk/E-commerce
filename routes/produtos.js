@@ -12,8 +12,7 @@ const upload = multer({ storage });
 router.get('/', produtoController.index);
 
 
-//rota para mostrar o cadastro
-
+//rota para mostrar o cadastro de produtos
 router.get('/addProduto', produtoController.criar);
 
 //rota para criar produto
