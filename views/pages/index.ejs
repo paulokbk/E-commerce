@@ -49,7 +49,6 @@
             <section class="grade_produtos display_flex">
                <% if(produtos && produtos.length) { %> 
                     <% for (let i=0; i < produtos.length; i++) { %>
-                        <% console.log(produtos[i]?.image1) %>
                         <div class="item_produto">
                             <div class="produto_foto">
                                 <img src="produtos.images/<%= produtos[i].imagem %>" alt="aliança" />
@@ -60,7 +59,7 @@
                                 <div class="item_preco display_flex_column texto_roboto">
                                     <h2 class="avista">R$<%= produtos[i].preco %>,00</h2>
                                     <h3 class="parcelado texto_cinza">10x de R$<%= Math.round(produtos[i].preco/10) %>,00</h3>
-                                    <div class="botao_comprar texto_branco cor_laranja">COMPRAR</div>
+                                    <a href="/produto/<%= produtos[i].id %>" class="botao_comprar texto_branco cor_laranja">COMPRAR</a>
                                 </div>
                             </div>
                         </div>

@@ -26,20 +26,20 @@
     <a href="https://api.whatsapp.com/send/?phone=%2B5564981430962&text&type=phone_number&app_absent=0"><img
             class="whatsapp_logo" src="/images/whatslogo.png" alt="whatsapp logo"></a>
     <section class="localizacao_produto">
-        <p class="texto_roboto">Vivara / Joias / Aneis / Alianças / </p>
+        <p class="texto_roboto">Vivara / Joias / </p>
     </section>
     <section class="container_produto display_flex">
         <aside class="lado_esquedo_produto" >
-            <div class="banner_produto"></div>
-            <!-- <img src="/images/produto_principal.webp" alt="aliança"> -->
+            <div class="banner_produto"><img src="/produtos.images/<%= produto[0].imagem  %>" alt="aliança" height="500px"></div>
+            
             <div class="miniatura_produto display_flex">
                 <div class="seta_miniatura"> <img src="/images/chevron-left.svg" alt="seta"></div>
-                <div class="miniaturas miniaturas_principal"><img src="/images/produto_principal.webp"
+                <div class="miniaturas miniaturas_principal"><img src="/produtos.images/<%= produto[0].imagem  %>"
                         height="100px" alt="alinça">
                 </div>
-                <div class="miniaturas"><img src="/images/produto_miniarura2.webp" height="100px"
+                <div class="miniaturas"><img src="/produtos.images/<%= produto[0].imagem  %>" height="100px"
                         alt="mão de mulher"></div>
-                <div class="miniaturas"><img src="/images/produto_principal.webp" height="100px" alt="alinça">
+                <div class="miniaturas"><img src="/produtos.images/<%= produto[0].imagem  %>" height="100px" alt="alinça">
                 </div>
                 <div class="seta_miniatura"> <img src="/images/chevron-right.svg" alt="seta"></div>
             </div>
@@ -53,14 +53,13 @@
                 </div>
                 <h2 class="texto_garamond">DESCRIÇÃO E COMPOSIÇÃO</h2>
                 <ul class="especificacoes texto_roboto texto_cinza">
-                    <li>Largura:aproximadamente 2 mm</li>
-                    <li>Espessura média:aproximadamente 1,1 mm</li>
-                    <li>Classificação: Não Anatômica </li>
-                    <li>Material: Ouro Amarelo</li>
-                    <li>Sugestão: Para ele e para ela</li>
-                    <li>Garantia:12 Meses</li>
-                    <li>Cód. AN00048702</li>
-                    <li>Valor referente a uma aliança.</li>
+                    <% if(produto[0].largura ==! ""){%> 
+                    <li>Largura:aproximadamente <%= produto[0].largura  %></li>
+                    <% } %> 
+                    <li>Material: <%= produto[0].material  %></li>
+                    <li>Categoria: <%= produto[0].tipos[0][0].toUpperCase() + produto[0].tipos[0].substring(1) %></li>
+                    <li>Garantia:<%= produto[0].garantia  %> Meses</li>
+                    <li>Cód. <%= produto[0].id  %></li>
                     <li>Imagens meramente ilustrativas.</li>
                     <li>Todas as medidas são aproximadas e podem variar de acordo com a produção</li>
                 </ul>
@@ -68,10 +67,10 @@
         </aside>
         <aside class="lado_direito_produto display_flex">
             <div class="zona_nome_preco">
-                <a href="/"> <h1 class="texto_garamond texto_cinza">Coleção Vivara</h1> </a>
-                <h2 class="texto_garamond">Aliança de Casamento Ouro Amarelo</h2>
-                <h3 class="texto_roboto">R$1.250,00</h3>
-                <h4 class="texto_roboto texto_cinza">10x sem juros de R$ 125,00</h4>
+                <a href="/"> <h1 class="texto_garamond texto_cinza"><%= produto[0].status  %> </h1> </a>
+                <h2 class="texto_garamond"><%= produto[0].nome  %></h2>
+                <h3 class="texto_roboto">R$<%= produto[0].preco  %>,00</h3>
+                <h4 class="texto_roboto texto_cinza">10x sem juros de R$ <%= Math.round(produto[0].preco/10)  %>,00</h4>
             </div>
             <div class="zona_tamanho display_flex">
                 <div class="medida_dedo retangulo_arredondado texto_roboto texto_cinza display_flex">

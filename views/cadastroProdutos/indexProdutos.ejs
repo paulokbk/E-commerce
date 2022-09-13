@@ -50,9 +50,9 @@
                         <div class="item_preco display_flex_column texto_roboto">
                             <h2 class="avista">R$<%= produto.preco %>,00</h2>
                             <div class="edicao display_flex">
-                                <div class="botao_editar">VISUALIZAR</div>
-                            <div class="botao_editar">EDITAR</div> 
-                             <div class="botao_editar">DELETAR</div>
+                            <a class="botao_editar" href="/produto/<%= produto.id  %> ">VISUALIZAR</a>
+                            <a class="botao_editar" href="adm/editar/<%= produto.id  %> ">EDITAR</a>
+                            <a class="botao_editar" href="adm/deletar/<%= produto.id  %> ">DELETAR</a>
                              
                             </div>
                         </div>
