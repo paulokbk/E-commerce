@@ -1,8 +1,8 @@
 var express = require('express');
 const userController = require('../controllers/userController.js')
 const homeController = require('../controllers/homeController')
-const searchController = require('../controllers/searchController')
 const carrinhoController = require('../controllers/cartController')
+const searchController = require('../controllers/searchController')
 var router = express.Router();
 
 
@@ -14,10 +14,9 @@ router.get('/masculino', homeController.masculino);
 router.get('/carrinho', carrinhoController.carrinho);
 router.get('/produto', homeController.produto);
 router.get('/login', userController.login);
-router.get('/checkout', userController.checkout)
+router.get('/checkout', userController.checkout);
+router.get('/busca', searchController.buscar);
 
-
-router.get('/search', searchController.search);
 
 
 

@@ -16,13 +16,7 @@ const joias = (req, res) => {
 
 const casamento = (req, res) => {
     const produtos = Produto.findByCategoria('casamento');
-    res.render('pages/index',{
-        menu: createMenuObject('casamento'),
-        banner: {
-            background: 'fullbanner-casamento.webp',
-        },
-        produtos
-    })
+    res.render('pages/index', produtos)
 }
 
 const relogios = (req, res) => {
