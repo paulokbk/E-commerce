@@ -2,7 +2,7 @@
     "produtos": [
         {
             "id": "1205cc48-6d43-4bfd-a41e-fa593ee5a818",
-            "nome": " Brinco Ouro Rosé",
+            "nome": "teste",
             "preco": "4450",
             "status": "LANÇAMENTO",
             "volume": "",
@@ -144,6 +144,25 @@
                 "casamento"
             ],
             "imagem": "c4a9fd14-be05-4ec0-9091-25d533333a7b-AN00049227-1.webp"
+        },
+        {
+            "id": "69f07a3b-41da-46c0-9132-18918ffb5875",
+            "nome": "teste",
+            "preco": "125",
+            "status": "LANÇAMENTO",
+            "volume": "",
+            "material": "Viadagem",
+            "cor": "Preto",
+            "largura": "10",
+            "garantia": "10",
+            "tipos": [
+                "joias",
+                "casamento",
+                "relogios",
+                "acessorios",
+                "masculino"
+            ],
+            "imagem": "ef302148-d16f-4591-b951-4e4fa1132ed5-unknown.png"
         }
     ]
 }
