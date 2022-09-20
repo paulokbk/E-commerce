@@ -12,15 +12,16 @@ const upload = multer({ storage });
 router.get('/', produtoController.index);
 
 //rota para mostrar o cadastro de produtos
-router.get('/addProduto', produtoController.criar);
+router.get('/adicionar', produtoController.criarFormulario);
 
 //rota para criar produto
 router.post('/', upload.single('imagem') , produtoController.criarProduto);
 
-//rota para deletar produto
-// router.delete('/deletar/:id', )
+//rota para editar produto
+router.get('/editar/:id', produtoController.editarFormulario)
+router.put('/:id', upload.single('imagem') , produtoController.editarProduto);
 
-// //rota para editar produto
-// router.put('/editar/:id',)
+// rota para deletar produto
+router.delete('/:id', produtoController.deletarProduto)
 
 module.exports = router;

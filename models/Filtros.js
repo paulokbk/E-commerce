@@ -1,4 +1,4 @@
-let db = require('../database/db_produtos.json');
+let db = require('../database/db.json');
 
 const Filtros = {
     findAll: () => db.produtos,
@@ -35,7 +35,7 @@ const Filtros = {
 
     FindBestSeller: () => {
         return db.produtos.filter(produto =>{
-            if(produto.bestseller){
+            if(produto.bestseller == "sim"){
                 return produto
             }
         })

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+</head>
+<body>
+    <a href="/adm"> Voltar</a>
+    <h1>Formulario de cadastro de produtos:</h1>
+    <form 
+    method="POST"
+    action="/adm/<%= produto[0].id %>?_method=PUT"
+    enctype="multipart/form-data"
+    >
+        <label for="">Nome do produto:</label><br>
+        <input type="text" id="nome" name="nome" required value="<%=produto[0].nome%>"><br><br>
+        
+
+        <label for="">Preço:</label><br>
+        <input type="text" id="preço" name="preco" required value="<%=produto[0].preco%>"><br><br>
+
+        <label for="">Status:</label><br>
+        <input type="text" name="status" value="<%=produto[0].status%>"><br><br>
+
+        <label for="">Best Seller</label><br>
+        <input type="radio" value="sim" name="bestseller" <%= produto[0].bestseller ? "checked" : "" %> > Sim
+        <input type="radio" value="nao" name="bestseller" <%= produto[0].bestseller ? "" : "checked" %> > Não<br><br>
+        
+        <label for="">Imagens:</label><br>
+        <input type="file" name="imagem" id="imagem"><br><br>
+        <% if(produto){ %> 
+             <img src="/produtos.images/<%= produto[0].imagem %>" width="150px" height="150px" alt="">
+        <% } %>    
+        <br><br>
+
+        <label for="">Volume em ml:</label><br>
+        <input type="text" name="volume" id="volume" value="<%=produto[0].volume%>"><br><br>
+
+        <label for="">Material:</label><br>
+        <input type="text" name="material" id="material" value="<%=produto[0].material%>"><br><br>
+
+        <label for="">Cor:</label><br>
+        <input type="text"name='cor'  required id="cor" value="<%=produto[0].cor%>"><br><br>
+
+        <label for="">Largura:</label><br>
+        <input type="text" id="largura" name="largura" value="<%=produto[0].largura%>"><br><br>
+
+        <label for="">Garantia em meses:</label><br>
+        <input type="number" id="garantia" required name="garantia" value="<%=produto[0].garantia%>"><br><br>
+
+        <!-- <label for="">Tamanhos disponiveis:</label><br>
+        <input type="checkbox" name="tamanho" value="11"> 11 <br>
+        <input type="checkbox" name="tamanho" value="12"> 12 <br>
+        <input type="checkbox" name="tamanho" value="13"> 13 <br>
+        <input type="checkbox" name="tamanho" value="14"> 14 <br>
+        <input type="checkbox" name="tamanho" value="15"> 15 <br>
+        <input type="checkbox" name="tamanho" value="16"> 16  <br>
+        <input type="checkbox" name="tamanho" value="17"> 17  <br>
+        <input type="checkbox" name="tamanho" value="18"> 18 <br>
+        <input type="checkbox" name="tamanho" value="19"> 19  <br>
+        <input type="checkbox" name="tamanho" value="20"> 20 <br>
+        <input type="checkbox" name="tamanho" value="21"> 21  <br>
+        <input type="checkbox" name="tamanho" value="22"> 22 <br> -->
+
+
+
+        <br><br><label for="">Categorias:</label><br>
+
+
+
+        <input type="checkbox" id="tipo1" name="tipos" value="joias" <% produto[0].tipos.forEach(tipo =>{ %>
+            <% if(tipo == "joias"){%>
+                checked
+               <% }}) %>>
+        <label for="tipo1"> Joias</label><br>
+
+        <input type="checkbox" id="tipo2" name="tipos" value="casamento" <% produto[0].tipos.forEach(tipo =>{ %>
+            <% if(tipo == "casamento"){%>
+                checked
+               <% }}) %>>
+        <label for="tipo2"> Casamento</label><br>
+
+        <input type="checkbox" id="tipo3" name="tipos" value="relogios" <% produto[0].tipos.forEach(tipo =>{ %>
+            <% if(tipo == "relogios"){%>
+                checked
+               <% }}) %>>
+        <label for="tipo3"> Relogios</label><br>
+
+        <input type="checkbox" id="tipo4" name="tipos" value="acessorios" <% produto[0].tipos.forEach(tipo =>{ %>
+            <% if(tipo == "acessorios"){%>
+                checked
+               <% }}) %>>
+        <label for="tipo4"> Acessorios</label><br>
+
+        <input type="checkbox" id="tipo5" name="tipos" value="masculino"<% produto[0].tipos.forEach(tipo =>{ %>
+            <% if(tipo == "masculino"){%>
+                checked
+               <% }}) %>>
+        <label for="tipo5"> Masculino</label><br><br>
+
+        <input type="submit" value="SALVAR">  
+       
+    </form>
+</body>
+</html>
