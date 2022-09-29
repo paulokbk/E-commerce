@@ -1,7 +1,7 @@
 <header>
     <section id="top_header" class="texto_roboto texto_cinza">
         <div id="dentro_top_header" class="tamanho_maximo_conteudo display_flex">
-            <a href="/">
+            <a href="/login">
                 <div id="minha_conta" class="display_flex">
                     <svg class="cor_laranja_texto" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
                         fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
@@ -39,8 +39,8 @@
                 <li class="<% if(menu.masculino){%>active<%}%>"><a href="/masculino">MASCULINO</a></li>
             </ul>
         </div>
-        <form id="zona_busca">
-            <input type="text" name="procura" id="procura" placeholder="Digite o que busca"
+        <form id="zona_busca" action="/busca" method="GET">
+            <input type="text" name="busca" id="procura" placeholder="Digite o que busca"
                 class="cor_cinza texto_roboto" required />
             <button type="submit" id="botao_pesquisa"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                     fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">

@@ -25,46 +25,41 @@
                     class="whatsapp_logo" src="images/whatslogo.png" alt="whatsapp logo" /></a>
 
         <section class="banner_home">
-            <% if(banner.background){ %>
-                <img class="banner_principal" src="images/<%= banner.background %>" alt="banner1" />
-            <% } %>
+                <h1><h1>
+                <!-- <img class="banner_principal" src="images/fullbanner-joias-vivara_KATE-desk.webp" alt="banner1" /> -->
         </section>
         
-            
-            <% if(banner.typePage == 'home'){ %>
-                    <%- include("../partials/nav.categoria.ejs") %> 
-                    <%- include("../partials/mais_vendidos.ejs") %> 
-                    <%- include("../partials/carrosel.ejs") %>     
-            <% } %>   
 
             <section class="experiencia_vivara">
                 <section class="zona_titulo">
                     <span class="linha_texto"></span>
-                    <h1 class="h1_titulo texto_garamond">A Experiência Vivara</h1>
+                    <h1 class="h1_titulo texto_garamond">Resultado da busca: </h1>
                     <h2 class="h2_titulo texto_roboto">
-                        CONHEÇA NOSSOS PRODUTOS EXCLUSIVOS
+                         "<%= busca %>"
                     </h2>
                 </section>
             </section>
             <section class="grade_produtos display_flex">
-               <% if(produtos && produtos.length) { %> 
-                    <% for (let i=0; i < produtos.length; i++) { %>
+                
+               <% if(resultado_busca.length) { %> 
+                 
+                    <% resultado_busca.map( produto =>{%>
                         <div class="item_produto">
                             <div class="produto_foto">
-                                <img src="produtos.images/<%= produtos[i].imagem %>" alt="aliança" />
+                                <img src="produtos.images/<%= produto.imagem %>" alt="aliança" />
                             </div>
                             <div class="produto_info display_flex_column">
-                                <h2 class="titulo_produto texto_roboto texto_cinza"><%= produtos[i].status %></h2>
-                                <div class="item_nome"><%= produtos[i].nome %></div>
+                                <h2 class="titulo_produto texto_roboto texto_cinza"><%= produto.status %></h2>
+                                <div class="item_nome"><%= produto.nome %></div>
                                 <div class="item_preco display_flex_column texto_roboto">
-                                    <h2 class="avista">R$<%= produtos[i].preco %>,00</h2>
-                                    <h3 class="parcelado texto_cinza">10x de R$<%= Math.round(produtos[i].preco/10) %>,00</h3>
-                                    <a href="/produto/<%= produtos[i].id %>" class="botao_comprar texto_branco cor_laranja">COMPRAR</a>
+                                    <h2 class="avista">R$<%= produto.preco %>,00</h2>
+                                    <h3 class="parcelado texto_cinza">10x de R$<%= Math.round(produto.preco/10) %>,00</h3>
+                                    <div class="botao_comprar texto_branco cor_laranja">COMPRAR</div>
                                 </div>
                             </div>
                         </div>
 
-                <% } } %>
+                <% })} %>
 
             </section>
         </main>

@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Roboto:wght@400;700&display=swap');
 
 
-main {}
+main {
+}
+
+.adm-button{
+    padding-top: 50px;
+    margin-left: 32%;
+}
 
 #section_login {
+    padding-top: 100px;
     /* border: 1px solid navy; */
     display: flex;
     justify-content: center;

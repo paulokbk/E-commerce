@@ -7,6 +7,10 @@ html {
     background: #fff;
 }
 
+a:hover{
+    text-decoration: none;
+}
+
 header a {
     text-decoration: none;
     color: #000;
@@ -34,7 +38,7 @@ header a:hover{
     right: 0;
     margin: 20px;
     animation-name: pulsando;
-    animation-duration: 500ms;
+    animation-duration: 300ms;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
@@ -237,6 +241,16 @@ footer{
     box-shadow: 0px 0px 30px 0px rgba(210,210,210,0.6)
 }
 
+.item_produto:hover{
+    cursor: pointer;
+}
+
+.item_produto:hover .botao_comprar{
+    transition: 1000ms;
+    opacity: 100;
+    cursor: pointer;
+}
+
 .produto_foto img{
     width: 220px;
     height: 220px;
@@ -278,12 +292,13 @@ footer{
     padding: 12px 25px;
     border-radius: 40px;
     font-weight: 500;
+    border: 1px solid #ffa67d ;
 }
 
 .botao_comprar:hover{
-    transition: 1000ms;
-    opacity: 100;
-    cursor: pointer;
+    color: #ffa67d;
+    background-color: white;
+    border: 1px solid #ffa67d ;
 }
 
 .grade_produtos{

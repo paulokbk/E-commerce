@@ -2,4 +2,4 @@ const carrinho = (req, res) => {
     res.render ('pages/cart')
 }
 
-module.exports.carrinho = carrinho
+module.exports.carrinho = carrinho;
