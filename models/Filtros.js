@@ -40,5 +40,9 @@ const Filtros = {
             }
         })
     },
+    findByEmail: (email) => {
+        const user = db.administradores.find(user => user.email === email);
+        return user;
+    },
 }
 module.exports = Filtros;
