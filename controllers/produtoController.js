@@ -6,6 +6,7 @@ const produtoController = {
 
     //exibe todos produtos
     index: (req, res) =>{
+        
         const produtos = Filtros.findAll();
         res.render('cadastroProdutos/indexProdutos', { produtos })
     },
@@ -43,7 +44,7 @@ const produtoController = {
         const produto = req.body;
         const imagem = req.file.filename;
         Produto.criar(produto, imagem);
-        res.redirect('/adm');
+        res.redirect('/admin');
     },
 
     //edita produto
@@ -60,7 +61,7 @@ const produtoController = {
         const imagem = req.file.filename;
         Produto.removerImagem(id);
         Produto.editar(id, produto, imagem);
-        res.redirect('/adm');
+        res.redirect('/admin');
     },
 
     //deleta produto
@@ -68,7 +69,7 @@ const produtoController = {
         const { id } = req.params;
         Produto.removerImagem(id);
         Produto.deletar(id);
-        res.redirect('/adm');
+        res.redirect('/admin');
     },
 
 }
