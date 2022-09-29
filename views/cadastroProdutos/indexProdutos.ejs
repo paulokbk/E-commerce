@@ -19,16 +19,16 @@
 
 <body>
  
+        <%- include("../partials/cut-header.ejs") %>
 
         <main class="tamanho_maximo_conteudo"> 
-            <a href="/adm/adicionar"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-plus-circle-fill botao_add" viewBox="0 0 16 16">
+            <a href="/admin/adicionar"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-plus-circle-fill botao_add" viewBox="0 0 16 16">
                 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
               </svg></a>
 
 
             <section class="experiencia_vivara">
                 <section class="zona_titulo">
-                    <span class="linha_texto"></span>
                     <h1 class="h1_titulo texto_garamond">Todos os produtos</h1>
                     <h2 class="h2_titulo texto_roboto">
                         TODOS PRODUTOS EM EXIBIÇÃO NO SITE
@@ -51,8 +51,8 @@
                             <h2 class="avista">R$<%= produto.preco %>,00</h2>
                             <div class="edicao display_flex">
                             <a class="botao_editar" href="/produto/<%= produto.id  %> ">VISUALIZAR</a>
-                            <a class="botao_editar" href="adm/editar/<%= produto.id  %> ">EDITAR</a>
-                            <form method="POST" action="/adm/<%= produto.id %>?_method=DELETE">
+                            <a class="botao_editar" href="admin/editar/<%= produto.id  %> ">EDITAR</a>
+                            <form method="POST" action="/admin/<%= produto.id %>?_method=DELETE">
                                 <button class="botao_editar">DELETAR</button>
                             </form>
                             </div>
@@ -63,11 +63,9 @@
            <% } else {  %>
             <h2 class="h2_titulo texto_roboto">-- NÃO HÁ NENHUM PRODUTO CADASTRADO --</h2>
             <% } %> 
-            
-                
-
-
             </section>
+            <form action="/admin/logout" method="POST"><button>SAIR DA CONTA</button></form>
         </main>
+       
 
 
